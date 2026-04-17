@@ -1,0 +1,119 @@
+{
+  "HEADER": {
+    "SEARCH": "Search",
+    "LOGIN": "Login"
+  },
+  "NAV": {
+    "ITEM1": "Nav 1",
+    "ITEM2": "Nav 2",
+    "ITEM3": "Nav 3",
+    "ITEM4": "Nav 4",
+    "ITEM5": "Nav 5",
+    "ITEM6": "Nav 6",
+    "ITEM7": "Nav 7"
+  },
+  "HERO": {
+    "TITLE": "Hero Section",
+    "DESC": "Here you can add a short description about the purpose of the portal followed by a call to action button and an illustration or image on the left side.",
+    "CTA": "Primary Action"
+  },
+  "WHO_WE_ARE": {
+    "TITLE": "Who We Are",
+    "DESC": "Here you can add a short description about the purpose of the portal followed by a call to action button and an illustration or image on the left side.",
+    "CTA": "Secondary Action",
+    "STATS": {
+      "LABEL": "People"
+    }
+  },
+  "SERVICES": {
+    "TITLE": "Services Section",
+    "DESC": "Here you can add a short description about the purpose of the portal followed by a call to action button and an illustration or image on the left side.",
+    "VIEW_ALL": "View All",
+    "CARD": {
+      "TITLE": "Card address",
+      "DESC": "Additional text for the card content.",
+
+      "TAG1": "Tag",
+      "TAG2": "Tag",
+      "TAG3": "Tag",
+      "ACTION": "Action",
+      "SECONDARY": "Secondary Action"
+    }
+  },
+  "NEWS": {
+    "TITLE": "Newscard headline in two lines",
+    "DESC": "Here you can include a brief description of the title in four lines.",
+    "READ_MORE": "Read More",
+    "VIEW_ALL": "View All"
+  },
+  "PARTNERS": {
+    "TITLE": "Partners Section",
+    "PARTNER_LABEL": "Partner Logo"
+  },
+
+  "SERVICE_DETAIL": {
+    "BREADCRUMB": "Link",
+    "START_SERVICE": "Start Service",
+    "SLA": "Service Level Agreement",
+    "TABS": {
+      "STEPS": "Steps",
+      "TERMS": "Terms of Use",
+      "DOCS": "Required Documents"
+    },
+    "STEPS": {
+      "1": "Log in to the National Single Sign-On Portal via the Balady platform.",
+      "2": "Select Building License Services, then Issue Building License.",
+      "3": "Licensing services, then select the required municipality.",
+      "4": "Choose the engineering office, then enter the building survey issuance number and year, and attach a copy of the deed.",
+      "5": "Submit the request to the specified engineering office, then complete the information and attachments at the office and send it to the municipality.",
+      "6": "Confirm request data, attachments, and approvals by the municipality.",
+      "7": "Request approval and issuance of payment. Pay fees and print the license."
+    },
+    "SIDEBAR": {
+      "TARGET_AUDIENCE": "Target Audience",
+      "TARGET_AUDIENCE_VAL": "Citizens, GCC nationals, investors, and foreigners",
+      "DURATION": "Service Duration",
+      "DURATION_VAL": "5.0 Days",
+      "CHANNELS": "Service Channels",
+      "CHANNELS_VAL": "Web and Mobile App",
+      "COST": "Service Cost",
+      "COST_VAL": "Free",
+      "PAYMENT": "Payment Channels",
+      "FAQ": "FAQ",
+      "PHONE": "Phone",
+      "EMAIL": "Email",
+      "DOWNLOAD_GUIDE": "Download User Guide",
+      "MOBILE_APPS": "Mobile Apps"
+    },
+    "RELATED": "Related Services",
+    "FEEDBACK": {
+      "LAST_UPDATE": "Last update: 04/12/2020 - 4:13 PM KSA time",
+      "RATE_BTN": "Rate this service",
+      "RATING_VAL": "This service was rated with an average of 3.9 from 1544 ratings",
+      "HELPFUL_QUESTION": "Was this page helpful?",
+      "YES": "Yes",
+      "NO": "No",
+      "YES_PERCENT": "60% of users said yes"
+    }
+  },
+  "SERVICE_FORM": {
+    "TITLE": "Text Fields",
+    "DESC": "When using forms, standard form fields are text fields usually used for short text input. Form field states include default, active, focused, error, hint, and disabled.",
+    "REQUIRED_INFO": "* Required information",
+    "STEPS": {
+      "STEP1": { "TITLE": "First Step", "DESC": "Step description" },
+      "STEP2": { "TITLE": "Second Step", "DESC": "Step description" },
+      "STEP3": { "TITLE": "Third Step", "DESC": "Step description" }
+    },
+    "LABELS": {
+      "MANDATORY": "Mandatory Text Input",
+      "OPTIONAL": "Optional Text Input",
+      "PLACEHOLDER": "Hint text",
+      "HELP": "Help text"
+    },
+    "ACTIONS": {
+      "BACK": "Back",
+      "NEXT": "Next"
+    }
+  }
+}

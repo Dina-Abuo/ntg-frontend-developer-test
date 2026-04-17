@@ -1,0 +1,65 @@
+.app-header {
+  font-family: inherit;
+
+  .header-link :hover {
+    color: var(--elm-primary) !important;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+
+    &:hover, &.active {
+      color: var(--elm-primary);
+      border-bottom-color: var(--elm-primary);
+    }
+  }
+
+  .logo img {
+    object-fit: contain;
+  }
+}
+
+:host-context([dir="ltr"]) {
+  .top-bar {
+    .d-flex.gap-4 {
+      flex-direction: row-reverse;
+    }
+  }
+}
+.app-wrapper {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.app-wrapper.lang-changing {
+  opacity: 0;
+  transform: translateY(10px); // حركة خفيفة
+}
+
+
+/* Mobile */
+@media (max-width: 992px) {
+  .main-nav .container {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    display: none !important; 
+  }
+
+  .header-link {
+    span {
+      display: none; 
+    }
+  }
+
+  /* نخفي البحث */
+  .header-link:first-child {
+    display: none !important;
+  }
+}
