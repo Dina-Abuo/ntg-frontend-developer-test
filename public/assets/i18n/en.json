@@ -113,7 +113,11 @@
     },
     "ACTIONS": {
       "BACK": "Back",
-      "NEXT": "Next"
-    }
+      "NEXT": "Next",
+      "YES": "Yes",
+      "NO": "No"
+    },
+    "QUESTION": "Was this page helpful?",
+    "PERCENTAGE": "60% of users said yes out of 2843 comments"
   }
 }

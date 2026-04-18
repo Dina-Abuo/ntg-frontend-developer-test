@@ -1,0 +1,197 @@
+<div class="bg-white">
+  <div class="container pt-4">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb small">
+        <li class="breadcrumb-item">
+          <a href="#" class="text-decoration-none text-muted mx-2">{{
+            'SERVICE_DETAIL.BREADCRUMB' | translate
+          }}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ 'SERVICE_DETAIL.BREADCRUMB' | translate }}
+        </li>
+      </ol>
+    </nav>
+
+    <div class="row g-4">
+      <!-- Form Area -->
+      <div class="col-lg-8 order-2 order-lg-1">
+        <div>
+          <h2 class="elm-section__title">
+            {{ 'SERVICE_FORM.TITLE' | translate }}
+          </h2>
+          <p class="small mb-4">
+            {{ 'SERVICE_FORM.DESC' | translate }}
+          </p>
+          <p class="text-danger small mb-5">{{ 'SERVICE_FORM.REQUIRED_INFO' | translate }}</p>
+
+          <form
+            [formGroup]="serviceForm"
+            (ngSubmit)="onSubmit()"
+            class="service-form"
+            aria-labelledby="form-title"
+          >
+            <div class="row g-4">
+              @for (field of fields; track field.name) {
+                <div class="col-md-6 service-form__field">
+                  <!-- Label -->
+                  <label class="service-form__label form-label fw-bold" [attr.for]="field.name">
+                    @if (field.required) {
+                      <span class="text-danger">*</span>
+                    }
+                    {{ 'SERVICE_FORM.LABELS.' + field.label | translate }}
+                  </label>
+
+                  <!-- INPUT TYPES -->
+
+                  <!-- Default -->
+                  @if (!field.hasIcon && !field.hasGroup) {
+                    <input
+                      pInputText
+                      [id]="field.name"
+                      [formControlName]="field.name"
+                      type="text"
+                      class="form-control service-form__input"
+                      [placeholder]="'SERVICE_FORM.LABELS.PLACEHOLDER' | translate"
+                      [attr.aria-required]="field.required"
+                      [attr.aria-invalid]="isFieldInvalid(field.name) ? 'true' : 'false'"
+                    />
+                  }
+
+                  <!-- With Icon -->
+                  @if (field.hasIcon) {
+                    <p-iconField iconPosition="right">
+                      <p-inputIcon><i class="pi pi-search"></i></p-inputIcon>
+                      <input
+                        pInputText
+                        [formControlName]="field.name"
+                        class="form-control service-form__input"
+                      />
+                    </p-iconField>
+                  }
+                  @if (field.hasGroup) {
+                    <!-- Input Group -->
+                    <p-inputgroup>
+                      @if (!field.isLeft) {
+                        <p-inputgroup-addon>
+                          <span class="service-form__addon">نص</span>
+                        </p-inputgroup-addon>
+                      }
+                      <input
+                        pInputText
+                        [formControlName]="field.name"
+                        [placeholder]="'SERVICE_FORM.LABELS.PLACEHOLDER' | translate"
+                        [attr.aria-required]="field.required"
+                        [attr.aria-invalid]="isFieldInvalid(field.name) ? 'true' : 'false'"
+                        class="form-control service-form__input"
+                      />
+                      @if (field.isLeft) {
+                        <p-inputgroup-addon>
+                          <span class="service-form__addon">نص</span>
+                        </p-inputgroup-addon>
+                      }
+                    </p-inputgroup>
+                  }
+
+                  <!-- Help -->
+                  @if (field.hasHelp) {
+                    <div class="service-form__help text-muted small mt-2">
+                      <i class="pi pi-info-circle"></i>
+                      {{ 'SERVICE_FORM.LABELS.HELP' | translate }}
+                    </div>
+                  }
+
+                  <!-- Error -->
+                  @if (isFieldInvalid(field.name)) {
+                    <div class="service-form__error text-danger small mt-2" role="alert">
+                      {{ 'SERVICE_FORM.REQUIRED_INFO' | translate }}
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Actions -->
+            <div class="d-flex gap-2 mt-4">
+              <app-button
+                variant="outline"
+                (clicked)="goBack()"
+                label="SERVICE_FORM.ACTIONS.BACK"
+              ></app-button>
+
+              <app-button
+                variant="primary"
+                type="submit"
+                label="SERVICE_FORM.ACTIONS.NEXT"
+              ></app-button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Stepper Sidebar -->
+      <div class="col-lg-4 order-1 order-lg-2">
+        <aside class="stepper-sidebar rounded p-5 h-30">
+          <div class="stepper-container d-none d-md-flex">
+            <!-- Step 1 (Completed) -->
+            <div class="step-item completed">
+              <div class="step-line"></div>
+              <div class="step-indicator">
+                <i class="pi pi-check text-white"></i>
+              </div>
+              <div class="step-label">
+                <h6 class="fw-bold mb-0">{{ 'SERVICE_FORM.STEPS.STEP1.TITLE' | translate }}</h6>
+                <p class="small mb-0">
+                  {{ 'SERVICE_FORM.STEPS.STEP1.DESC' | translate }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 (Active) -->
+            <div class="step-item active">
+              <div class="step-line"></div>
+              <div class="step-indicator">2</div>
+              <div class="step-label">
+                <h6 class="fw-bold mb-0">{{ 'SERVICE_FORM.STEPS.STEP2.TITLE' | translate }}</h6>
+                <p class="small text-muted mb-0">
+                  {{ 'SERVICE_FORM.STEPS.STEP2.DESC' | translate }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 (Pending) -->
+            <div class="step-item">
+              <div class="step-indicator">3</div>
+              <div class="step-label">
+                <h6 class="fw-bold mb-0">{{ 'SERVICE_FORM.STEPS.STEP3.TITLE' | translate }}</h6>
+                <p class="small text-muted mb-0">
+                  {{ 'SERVICE_FORM.STEPS.STEP3.DESC' | translate }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rating Footer -->
+  <div class="feedback-section p-4 mt-5">
+    <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+      <!-- Question -->
+      <p class="m-0 order-1">{{ 'SERVICE_FORM.QUESTION' | translate }}</p>
+
+      <!-- Percentage -->
+      <p class="feedback-section__Percentage small m-0 order-2 order-md-3">
+        {{ 'SERVICE_FORM.PERCENTAGE' | translate }}
+      </p>
+
+      <!-- Buttons -->
+      <div class="d-flex gap-2 order-3 order-md-2">
+        <app-button variant="primary" label="SERVICE_FORM.ACTIONS.YES"></app-button>
+        <app-button variant="primary" label="SERVICE_FORM.ACTIONS.NO"></app-button>
+      </div>
+    </div>
+  </div>
+</div>
