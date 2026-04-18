@@ -1,5 +1,5 @@
 <div class="bg-white">
-  <div class="container pt-4">
+  <div class="pt-5 px-5">
     <!-- Breadcrumbs -->
     <nav aria-label="breadcrumb" class="mb-4">
       <ol class="breadcrumb small">
@@ -114,17 +114,17 @@
 
             <!-- Actions -->
             <div class="d-flex gap-2 mt-4">
-              <app-button
+              <elm-button
                 variant="outline"
                 (clicked)="goBack()"
                 label="SERVICE_FORM.ACTIONS.BACK"
-              ></app-button>
+              ></elm-button>
 
-              <app-button
+              <elm-button
                 variant="primary"
                 type="submit"
                 label="SERVICE_FORM.ACTIONS.NEXT"
-              ></app-button>
+              ></elm-button>
             </div>
           </form>
         </div>
@@ -189,8 +189,8 @@
 
       <!-- Buttons -->
       <div class="d-flex gap-2 order-3 order-md-2">
-        <app-button variant="primary" label="SERVICE_FORM.ACTIONS.YES"></app-button>
-        <app-button variant="primary" label="SERVICE_FORM.ACTIONS.NO"></app-button>
+        <elm-button variant="primary" label="SERVICE_FORM.ACTIONS.YES"></elm-button>
+        <elm-button variant="primary" label="SERVICE_FORM.ACTIONS.NO"></elm-button>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@ import { Component, EventEmitter, input, output } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-button',
+  selector: 'elm-button',
   imports: [CommonModule, TranslatePipe],
   template: `
     <button [type]="type()" [ngClass]="classes" (click)="clicked.emit()">

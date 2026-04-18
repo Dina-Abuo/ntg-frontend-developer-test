@@ -7,11 +7,11 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule],
   template: `
     <section class="news-section">
-      <div class="container py-5">
+      <div class="container">
         <div class="row d-flex justify-content-between mb-5">
           <div class="col-12 col-md-8">
-            <h2 class="section-title mb-3">{{ 'NEWS.TITLE' | translate }}</h2>
-            <p class="text-muted lead d-none d-md-block">{{ 'NEWS.DESC' | translate }}</p>
+            <h2 class="elm-section__title">{{ 'NEWS.TITLE' | translate }}</h2>
+            <p class="small">{{ 'NEWS.DESC' | translate }}</p>
           </div>
           <div class="col-6 col-md-2">
             <button class="elm-btn-outline">{{ 'NEWS.VIEW_ALL' | translate }}</button>
@@ -47,7 +47,7 @@ import { TranslateModule } from '@ngx-translate/core';
     `
       .news-section {
         padding: 80px 0;
-        background: #fff;
+        background:var(--elm-white);;
       }
       .news-card {
         transition: all 0.3s ease;

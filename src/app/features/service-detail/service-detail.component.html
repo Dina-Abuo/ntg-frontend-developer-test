@@ -1,0 +1,265 @@
+<div>
+  <div class="elm-bg-gradient p-5">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb small">
+        <li class="breadcrumb-item">
+          <a href="#" class="text-decoration-none text-muted">{{
+            'SERVICE_DETAIL.BREADCRUMB' | translate
+          }}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {{ 'SERVICE_DETAIL.BREADCRUMB' | translate }}
+        </li>
+      </ol>
+    </nav>
+    <div class="row g-4">
+      <!-- content Area -->
+      <div class="col-lg-9">
+        <div>
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-4 mb-4"
+          >
+            <!-- header content -->
+            <div>
+              <h2 class="elm-section__title">{{ 'SERVICE_DETAIL.TITLE' | translate }}</h2>
+              <div class="tags d-flex gap-2 mb-4">
+                <p-tag
+                  [value]="'SERVICE_DETAIL.TAGS.TAG3' | translate"
+                  severity="info"
+                  class="tag-pill-info"
+                ></p-tag>
+                <p-tag
+                  [value]="'SERVICE_DETAIL.TAGS.TAG2' | translate"
+                  severity="success"
+                  class="tag-pill-success"
+                ></p-tag>
+                <p-tag
+                  [value]="'SERVICE_DETAIL.TAGS.TAG1' | translate"
+                  severity="secondary"
+                  class="tag-pill"
+                ></p-tag>
+              </div>
+              <p>{{ 'SERVICE_DETAIL.DESC' | translate }}</p>
+              <a
+                href="#"
+                class="text-success text-decoration-none d-flex align-items-center gap-2 small fw-semibold"
+              >
+                <span>{{ 'SERVICE_DETAIL.SLA' | translate }}</span>
+                <img src="link-04.svg" alt="ExternalLink" size="16" />
+              </a>
+            </div>
+            <!-- router button -->
+            <div class="col-12 col-md-2">
+              <elm-button
+                (clicked)="navLink()"
+                variant="primary"
+                label="SERVICE_DETAIL.START_SERVICE"
+              />
+            </div>
+          </div>
+
+          <!-- Tabs Section -->
+          <div class="service-tabs mt-5">
+            <p-tabs value="0">
+              <!-- Headers -->
+              <p-tablist>
+                <p-tab value="0">
+                  {{ 'SERVICE_DETAIL.TABS.STEPS' | translate }}
+                </p-tab>
+
+                <p-tab value="1">
+                  {{ 'SERVICE_DETAIL.TABS.TERMS' | translate }}
+                </p-tab>
+
+                <p-tab value="2">
+                  {{ 'SERVICE_DETAIL.TABS.DOCS' | translate }}
+                </p-tab>
+              </p-tablist>
+
+              <!-- Content -->
+              <p-tabpanels>
+                <!-- STEPS -->
+                <p-tabpanel value="0">
+                  <div
+                    class="video-placeholder rounded-4 my-5 d-flex align-items-center justify-content-center position-relative"
+                  >
+                    <img src="Featured icon.svg" alt="Featured icon" />
+                  </div>
+
+                  <div class="steps-list">
+                    @for (i of steps; track $index) {
+                      <div class="step-item d-flex gap-3 mb-3">
+                        <span class="step-number fw-bold text-muted">{{ i }}-</span>
+                        <p class="text-muted mb-0">
+                          {{ 'SERVICE_DETAIL.STEPS.' + i | translate }}
+                        </p>
+                      </div>
+                    }
+                  </div>
+                </p-tabpanel>
+
+                <!-- TERMS -->
+                <p-tabpanel value="1">
+                  <p class="text-muted p-4">NON</p>
+                </p-tabpanel>
+
+                <!-- DOCS -->
+                <p-tabpanel value="2">
+                  <p class="text-muted p-4">NON</p>
+                </p-tabpanel>
+              </p-tabpanels>
+            </p-tabs>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="col-lg-3">
+        <aside class="service-sidebar bg-white rounded-4 border p-4">
+          <div class="sidebar-item">
+            <img src="user.svg" alt="user" />
+            <div class="step-label">
+              <h6>
+                {{ 'SERVICE_DETAIL.SIDEBAR.TARGET_AUDIENCE' | translate }}
+              </h6>
+              <p class="small mb-0">
+                {{ 'SERVICE_DETAIL.SIDEBAR.TARGET_AUDIENCE_VAL' | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="clock-01.svg" alt="clock" />
+            <div class="step-label">
+              <h6>{{ 'SERVICE_DETAIL.SIDEBAR.DURATION' | translate }}</h6>
+              <p class="small mb-0">
+                {{ 'SERVICE_DETAIL.SIDEBAR.DURATION_VAL' | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="computer-phone-sync.svg" alt="computer-phone-sync" />
+            <div class="step-label">
+              <h6>{{ 'SERVICE_DETAIL.SIDEBAR.CHANNELS' | translate }}</h6>
+              <p class="small mb-0">
+                {{ 'SERVICE_DETAIL.SIDEBAR.CHANNELS_VAL' | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <img src="money-04.svg" alt="money-04" />
+            <div class="step-label">
+              <h6>{{ 'SERVICE_DETAIL.SIDEBAR.COST' | translate }}</h6>
+              <p class="small mb-0">
+                {{ 'SERVICE_DETAIL.SIDEBAR.COST_VAL' | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div class="sidebar-item">
+            <div class="step-label">
+              <h6 class="mb-2">{{ 'SERVICE_DETAIL.SIDEBAR.PAYMENT' | translate }}</h6>
+              <div class="d-flex gap-2">
+                <img src="Payment method icon (1).png" alt="STC Pay" />
+                <img src="Payment method icon.png" alt="Mada" />
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-links mb-4 pt-3 border-top">
+            <div class="step-label">
+              <h6>{{ 'SERVICE_DETAIL.SIDEBAR.FAQ' | translate }}</h6>
+              <a
+                href="#"
+                class="d-flex align-items-center gap-2 text-decoration-none small text-dark mb-2"
+              >
+                <span class="text-success">Ministry-FAQ's-page </span>
+                <img src="link-square-02.svg" alt="link-square-02" height="16" />
+              </a>
+            </div>
+
+            <div class="step-label">
+              <div class="sidebar-item">
+                <img src="phone.svg" alt="" height="16" />
+                <h6>
+                  {{ 'SERVICE_DETAIL.SIDEBAR.PHONE' | translate }}
+                </h6>
+              </div>
+              <a
+                href="tel:9200343222"
+                class="d-flex align-items-center gap-2 text-decoration-none small text-dark mb-2"
+              >
+                <span class="text-success">92003 43222</span>
+                <img src="link-square-02.svg" alt="link-square-02" height="16" />
+              </a>
+            </div>
+            <div class="step-label">
+              <div class="sidebar-item">
+                <img src="mail-01.svg" alt="email" size="12" />
+                <h6>
+                  {{ 'SERVICE_DETAIL.SIDEBAR.EMAIL' | translate }}
+                </h6>
+              </div>
+              <a
+                href="mailto:help@company.sa"
+                class="d-flex align-items-center gap-2 text-decoration-none small text-dark mb-2"
+              >
+                <span class="text-success">help@company.sa</span>
+                <img src="link-square-02.svg" alt="link-square-02" height="16" />
+              </a>
+            </div>
+          </div>
+
+          <button class="btn btn-light fs-6 py-3 rounded-2 fw-semibold text-dark mb-4">
+            {{ 'SERVICE_DETAIL.SIDEBAR.DOWNLOAD_GUIDE' | translate }}
+          </button>
+
+          <div class="app-stores border-top">
+            <h6 class="fw-bold mb-3 small mt-4">
+              {{ 'SERVICE_DETAIL.SIDEBAR.MOBILE_APPS' | translate }}
+            </h6>
+            <div class="d-flex flex-wrap gap-2 align-items-center">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                alt="App Store"
+                width="100"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play"
+                width="100"
+              />
+              <img src="Group.png" alt="AppGallery" width="100" />
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <!-- Related Services -->
+  <app-services classBackgroundColor="elm-bg-primary-25"></app-services>
+  <!-- last updata -->
+  <p class="small text-muted my-4 px-3 px-md-4">
+    {{ 'SERVICE_DETAIL.FEEDBACK.LAST_UPDATE' | translate }}
+  </p>
+  <!-- Feedback Section -->
+  <div class="feedback-section bg-white p-md-4 p-3">
+    <div class="d-flex flex-column flex-md-row align-items-star justify-content-md-between gap-4">
+      <div
+        class="rating-info d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2"
+      >
+        <p class="mb-0">
+          {{ 'SERVICE_DETAIL.WHO_EVALUATION' | translate }}
+          <span class="fw-bold h6 mb-0">3.9</span>
+        </p>
+        <div>
+          <p-rating [(ngModel)]="rating" [readonly]="true" iconCancelClass="hidden"></p-rating>
+          <span class="small text-muted">1544 {{ 'SERVICE_DETAIL.EVALUATION' | translate }}</span>
+        </div>
+      </div>
+      <elm-button label="SERVICE_DETAIL.FEEDBACK.RATE_BTN" variant="primary" />
+    </div>
+  </div>
+</div>

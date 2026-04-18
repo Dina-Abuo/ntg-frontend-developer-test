@@ -15,6 +15,7 @@
     --elm-secondary: #1B8354;
     --elm-tag-border-success-light: #ABEFC6;
     --elm-tag-background-success-light: #ECFDF3;
+    --elm-background-primary-25: #F7FDF9;
     --elm-input-border-default: #9DA4AE;
     --elm-input-text-placeholder: #6C737F;
     --elm-button-background-neutral-default: #F3F4F6;
@@ -122,5 +123,42 @@ body {
     line-height: 38px;
 }
 
+
+.step-label {
+    h6 {
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        color: var(--elm-stepper-text-primary);
+    }
+
+    p {
+        font-size: 0.75rem;
+        color: var(--elm-stepper-text-secondary);
+    }
+}
+
+.elm-bg-primary-25 {
+    background-color: var(--elm-background-primary-25);
+}
+
+.elm-bg-gradient {
+    background: linear-gradient(to bottom,
+            var(--elm-background-primary-25) 30%,
+            var(--elm-white) 30%,
+            var(--elm-white) 40%);
+}
+
+.feedback-section {
+    border-top: 2px solid var(--elm-secondary);
+}
+
+.breadcrumb {
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: var(--bs-breadcrumb-divider, "/");
+        float: right;
+        padding-left: var(--bs-breadcrumb-item-padding-x);
+    }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');

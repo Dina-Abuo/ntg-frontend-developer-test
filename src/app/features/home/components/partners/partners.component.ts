@@ -7,8 +7,8 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule],
   template: `
     <section class="partners-section bg-light">
-      <div class="container pt-5">
-        <h2 class="section-title mb-5">{{ 'PARTNERS.TITLE' | translate }}</h2>
+      <div class="container">
+        <h2 class="elm-section__title">{{ 'PARTNERS.TITLE' | translate }}</h2>
 
         <div class="partners-wrapper position-relative px-5">
           <button class="nav-btn prev" type="button" (click)="prev()">

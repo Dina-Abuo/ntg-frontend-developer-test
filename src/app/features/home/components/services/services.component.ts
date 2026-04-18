@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
@@ -6,13 +7,13 @@ import { TagModule } from 'primeng/tag';
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [ TranslateModule, CarouselModule, TagModule],
+  imports: [TranslateModule, CarouselModule, TagModule, CommonModule],
   template: `
-    <section class="services-section bg-light">
-      <div class="container py-5">
+    <section class="services-section" [ngClass]="classBackgroundColor()">
+      <div class="container">
         <div class="row d-flex justify-content-between  mb-5">
           <div class="col-lg-8">
-            <h2 class="section-title mb-3">{{ 'SERVICES.TITLE' | translate }}</h2>
+            <h2 class="elm-section__title">{{ 'SERVICES.TITLE' | translate }}</h2>
             <p class="text-muted lead">{{ 'SERVICES.DESC' | translate }}</p>
           </div>
           <div class="col-lg-2">
@@ -112,6 +113,7 @@ import { TagModule } from 'primeng/tag';
   ],
 })
 export class ServicesComponent {
+  classBackgroundColor = input<string>('');
   services = [1, 2, 3, 4, 5, 6]; // Mock data
 
   responsiveOptions = [

@@ -53,12 +53,22 @@
 
   "SERVICE_DETAIL": {
     "BREADCRUMB": "Link",
+    "TITLE": "Building permit",
+    "DESC": "For example, to purchase a plot of land to build your house, the service requires documenting the sale and purchase transaction at notary offices or through a notary public to register the property in your name.",
     "START_SERVICE": "Start Service",
     "SLA": "Service Level Agreement",
+    "EVALUATION": "Evaluation",
+    "WHO_EVALUATION": "This service has been rated as average",
     "TABS": {
       "STEPS": "Steps",
       "TERMS": "Terms of Use",
       "DOCS": "Required Documents"
+    },
+
+    "TAGS": {
+      "TAG1": "The platform",
+      "TAG2": "Journey of life",
+      "TAG3": "The side"
     },
     "STEPS": {
       "1": "Log in to the National Single Sign-On Portal via the Balady platform.",

@@ -8,15 +8,6 @@
         position: relative;
     }
 
-    .step-label {
-        h6 {
-            color: var(--elm-stepper-text-primary);
-        }
-
-        p {
-            color: var(--elm-stepper-text-secondary);
-        }
-    }
 
     .step-item {
         display: flex;
@@ -115,10 +106,4 @@
         border: 1px solid var(--elm-input-border-default);
         background-color: var(--elm-button-background-neutral-default);
     }
-}
-
-
-
-.feedback-section {
-    border-top: 2px solid var(--elm-secondary);
 }

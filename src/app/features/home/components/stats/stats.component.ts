@@ -8,11 +8,11 @@ import { TranslateModule } from '@ngx-translate/core';
 
   template: `
     <section class="stats-section">
-      <div class="container py-5">
+      <div class="container">
         <div class="row d-flex justify-content-between mb-5">
           <div class="col-lg-8">
-            <h2 class="section-title mb-3">{{ 'WHO_WE_ARE.TITLE' | translate }}</h2>
-            <p class="text-muted lead">{{ 'WHO_WE_ARE.DESC' | translate }}</p>
+            <h2 class="elm-section__title">{{ 'WHO_WE_ARE.TITLE' | translate }}</h2>
+            <p class="small">{{ 'WHO_WE_ARE.DESC' | translate }}</p>
           </div>
           <div class="col-lg-2">
             <button class="elm-btn-outline">{{ 'WHO_WE_ARE.CTA' | translate }}</button>
