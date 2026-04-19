@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   imports: [CommonModule, TranslateModule],
-  template: `
+template: `
     <section class="hero-section text-white d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center">
@@ -15,7 +16,7 @@ import { TranslateModule } from '@ngx-translate/core';
             <p class="lead mb-5 opacity-75">
               {{ 'HERO.DESC' | translate }}
             </p>
-            <button class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-1">{{ 'HERO.CTA' | translate }}</button>
+            <button class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-1" (click)="navRoute()">{{ 'HERO.CTA' | translate }}</button>
             
           </div>
           <div class="carousel-dots d-flex justify-content-center gap-2 mt-5">
@@ -60,4 +61,11 @@ import { TranslateModule } from '@ngx-translate/core';
     }
   `]
 })
-export class HeroComponent {}
+export class HeroComponent {
+
+  private router=inject (Router)
+
+  navRoute(){
+    return this.router.navigate(['/service-detail'])
+  }
+}

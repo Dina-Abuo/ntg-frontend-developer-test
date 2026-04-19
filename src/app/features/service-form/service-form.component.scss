@@ -67,6 +67,7 @@
     }
 }
 
+
 :host-context([dir="rtl"]) {
     .step-item .step-line {
         left: auto;
@@ -83,27 +84,5 @@
 :host-context([dir="ltr"]) {
     .feedback-section__Percentage {
         margin-left: auto;
-    }
-}
-
-::ng-deep {
-    .p-inputtext {
-        border-radius: 8px;
-        border: 1px solid var(--elm-input-border-default);
-        color: var(--elm-input-text-placeholder);
-
-        &:focus {
-            border-color: var(--elm-secondary);
-            box-shadow: var(--elm-shadow)
-        }
-    }
-
-    .p-inputtext.ng-invalid.ng-dirty {
-        border-color: #dc3545;
-    }
-
-    .p-inputgroupaddon {
-        border: 1px solid var(--elm-input-border-default);
-        background-color: var(--elm-button-background-neutral-default);
     }
 }

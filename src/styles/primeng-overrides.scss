@@ -1,0 +1,55 @@
+.p-inputtext {
+  border-radius: 5px !important;
+  background-color: var(--elm-white) !important;
+  border: 1px solid var(--elm-input-border-default) !important;
+  color: var(--elm-text-default) !important;
+
+  &:focus {
+    border-color: var(--elm-secondary) !important;
+    box-shadow: var(--elm-shadow) !important;
+  }
+}
+
+.p-inputtext.ng-invalid.ng-touched {
+  border-color: var(--elm-input-border-error) !important;
+}
+
+.p-inputgroupaddon {
+  border: 1px solid var(--elm-input-border-default) !important;
+  background-color: var(--elm-button-background-neutral-default) !important;
+}
+
+/* Tags */
+.tag-pill,
+.tag-pill-info,
+.tag-pill-success {
+  font-size: 0.7rem !important;
+  border-radius: 4px !important;
+}
+
+.tag-pill-info {
+  border: 1px solid var(--elm-tag-border-info-light) !important;
+}
+
+.tag-pill-success {
+  border: 1px solid var(--elm-tag-border-success-light) !important;
+}
+
+.tag-pill {
+  background: #f2f2f2 !important;
+  color: #666 !important;
+  border: 1px solid #ddd !important;
+}
+
+/* tabs*/
+
+.p-tabs {
+  background-color: transparent !important;
+}
+
+.p-tablist ,.p-tabpanels{
+    background-color: transparent !important;
+}
+.p-tab:hover{
+  color: var(--elm-secondary)!important;
+}

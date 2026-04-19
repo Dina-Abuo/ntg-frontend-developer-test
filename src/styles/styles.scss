@@ -1,0 +1,134 @@
+/* لازم أول حاجة */
+@use "bootstrap/scss/bootstrap" as *;
+
+/* System */
+@use "./tokens" as *;
+@use "./theme-light" as *;
+@use "./theme-dark" as *;
+
+/* PrimeNG */
+@use "./primeng-overrides" as *;
+
+/* CSS imports عادي (مش Sass) */
+@import "primeicons/primeicons.css";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Body */
+body {
+  font-family: var(--font-family-ar);
+  overflow-x: hidden;
+
+  &[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+
+  &[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+    font-family: var(--font-family-en);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--elm-primary);
+  border-radius: 4px;
+}
+
+/* Buttons */
+.elm-btn-primary,
+.elm-btn-outline {
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.elm-btn-primary {
+  background-color: var(--elm-secondary);
+  color: var(--elm-white);
+  border: 1px solid var(--elm-primary);
+
+  &:hover {
+    background: rgb(11, 159, 92);
+  }
+}
+
+.elm-btn-outline {
+  background: transparent;
+  color: var(--elm-text-default);
+  border: 1px solid var(--elm-primary);
+
+  &:hover {
+    background: var(--elm-primary);
+    color: var(--elm-white);
+  }
+}
+
+/* Global */
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.elm-section__title {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* Step */
+.step-label h6 {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--elm-stepper-text-primary);
+}
+
+.step-label p {
+  font-size: 0.75rem;
+  color: var(--elm-stepper-text-secondary);
+}
+
+/* Helpers */
+.elm-bg-primary-25 {
+  background: var(--elm-background-primary-25);
+}
+
+.elm-bg-gradient {
+  background: linear-gradient(to bottom,
+      var(--elm-background-primary-25) 30%,
+      var(--elm-white) 30%);
+}
+
+.feedback-section {
+  border-top: 2px solid var(--elm-secondary);
+}
+
+/* Breadcrumb fix RTL */
+.breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+  float: right;
+}

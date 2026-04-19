@@ -1,0 +1,42 @@
+:root {
+
+  /* Colors */
+  --elm-primary: #074D31;
+  --elm-secondary: #1B8354;
+
+  --elm-white: #FFFFFF;
+  --elm-text-default: #161616;
+  --elm-gray-light: #F8F9FA;
+
+  /* Backgrounds */
+  --elm-background-primary-25: #F7FDF9;
+  --elm-background-neutral-50: #f9fafb;
+
+  /* Inputs */
+  --elm-input-border-default: #9DA4AE;
+  --elm-input-border-error: #dc3545;;
+  --elm-input-text-placeholder: #6C737F;
+
+  /* Buttons */
+  --elm-button-background-neutral-default: #F3F4F6;
+
+  /* Stepper */
+  --elm-stepper-button-upcomming: #D2D6DB;
+  --elm-stepper-text-primary: #1F2A37;
+  --elm-stepper-text-secondary: #384250;
+
+  /* Tags */
+  --elm-tag-border-success-light: #ABEFC6;
+  --elm-tag-background-success-light: #ECFDF3;
+  --elm-tag-border-info-light: #B2DDFF;
+  --elm-tag-background-info-light: #EFF8FF;
+  --elm-tag-text-info: #1849A9;
+
+  /* Misc */
+  --elm-dark: #1A1A1A;
+  --elm-shadow: 0 0 0 0.2rem rgba(0, 118, 100, 0.25);
+
+  /* Fonts */
+  --font-family-ar: 'Cairo', sans-serif;
+  --font-family-en: 'Inter', sans-serif;
+}

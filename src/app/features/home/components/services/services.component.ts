@@ -91,24 +91,6 @@ import { TagModule } from 'primeng/tag';
         border-radius: 50%;
         background: var(--elm-tag-background-success-light);
       }
-      :host ::ng-deep .tag-pill-info,
-      :host ::ng-deep .tag-pill-success,
-      :host ::ng-deep .tag-pill {
-        font-size: 0.7rem;
-        border-radius: 4px;
-      }
-      :host ::ng-deep .tag-pill-info {
-        border: 1px solid var(--elm-tag-border-info-light) !important;
-      }
-
-      :host ::ng-deep .tag-pill-success {
-        border: 1px solid var(--elm-tag-border-success-light) !important;
-      }
-      :host ::ng-deep .tag-pill {
-        background: #f2f2f2 !important;
-        color: #666 !important;
-        border: 1px solid #ddd;
-      }
     `,
   ],
 })

@@ -37,50 +37,6 @@
     }
 }
 
-::ng-deep {
-    .p-tabview {
-        .p-tabview-nav {
-            background: transparent;
-            border-bottom: 2px solid #EEE;
-            gap: 1.5rem;
-            display: flex;
-            justify-content: flex-end;
-
-            li {
-                margin-bottom: -2px;
-
-                .p-tabview-nav-link {
-                    background: transparent;
-                    border: none;
-                    border-bottom: 2px solid transparent;
-                    color: #777;
-                    font-weight: 700;
-                    padding: 1rem 0;
-                    transition: all 0.2s ease;
-                    text-decoration: none;
-
-                    &:hover {
-                        color: var(--elm-primary);
-                    }
-                }
-
-                &.p-highlight .p-tabview-nav-link {
-                    color: var(--elm-primary);
-                    border-bottom-color: var(--elm-primary);
-                }
-            }
-        }
-
-        .p-tabview-panels {
-            padding: 2rem 0;
-            background: transparent;
-        }
-    }
-
-    .p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
-        color: #FBC02D;
-    }
-}
 
 :host-context([dir="ltr"]) {
     .breadcrumb-item+.breadcrumb-item::before {
@@ -107,26 +63,4 @@
             border-right: none !important;
         }
     }
-}
-
-
-:host ::ng-deep .tag-pill-info,
-:host ::ng-deep .tag-pill-success,
-:host ::ng-deep .tag-pill {
-    font-size: 0.7rem;
-    border-radius: 4px;
-}
-
-:host ::ng-deep .tag-pill-info {
-    border: 1px solid var(--elm-tag-border-info-light) !important;
-}
-
-:host ::ng-deep .tag-pill-success {
-    border: 1px solid var(--elm-tag-border-success-light) !important;
-}
-
-:host ::ng-deep .tag-pill {
-    background: #f2f2f2 !important;
-    color: #666 !important;
-    border: 1px solid #ddd;
 }
